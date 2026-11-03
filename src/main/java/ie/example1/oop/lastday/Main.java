@@ -17,6 +17,7 @@ public class Main {
         Book thirdBook = createBook("Last day of Result", "Tayyibah", 49);
         Book fourthBook = createBook("Welcome to jobs", "Tanvir", 881);
 
+        System.out.println("\n");
         secondBook.displayDetails();
         System.out.println("\n");
         thirdBook.displayDetails();
