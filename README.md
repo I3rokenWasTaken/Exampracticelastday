@@ -1,1 +1,1 @@
-Practicing for exam
+in Book class I added displaydetails method and borrowbook method
