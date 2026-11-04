@@ -3,7 +3,7 @@ package ie.example1.oop.lastday;
 public class Book {
     private String title;
     private String author;
-    private String pageCount;
+    private int pageCount;
 
     public Book(String title, String author, int pageCount) {
         this.title = title;
@@ -19,7 +19,7 @@ public class Book {
         return author;
     }
 
-    public String getPageCount() {
+    public int getPageCount() {
         return pageCount;
     }
 }
