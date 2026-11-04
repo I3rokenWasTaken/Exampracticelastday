@@ -19,14 +19,19 @@ public class Main {
                 System.out.println(book.getTitle());
             }
 
-            Book found = service.findBookByTitle("Dune");
+            Book found = service.findBookByTitle("Clean Code");
 
             if(found != null){
                 System.out.println(found.getTitle());
             }
             else{
-                System.out.println("Book not found");
+                System.out.println("Book " + found.getTitle() + " not found");
             }
+
+
+        System.out.println("Book list: " + service.getBookCount());
+        System.out.println("Remove Cleancode " + service.removeBook("Clean Code"));
+        System.out.println("Book list: " + service.getBookCount());
 
 
     }
