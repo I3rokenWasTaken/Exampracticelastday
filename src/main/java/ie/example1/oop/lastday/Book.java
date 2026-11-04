@@ -44,4 +44,12 @@ public class Book {
         }
         status=BookStatus.ON_LOAN;
     }
+
+    public void returnBook() {
+        if (status == BookStatus.AVAILABLE) {
+            throw new IllegalArgumentException("Book is not currently on loan");
+        }
+
+        status = BookStatus.AVAILABLE;
+    }
 }
