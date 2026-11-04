@@ -1,0 +1,16 @@
+package ie.example1.oop.lastday;
+
+import java.nio.file.Files;
+import java.nio.file.Path;
+
+
+public class PathExplore {
+    public static void main(String[] args){
+        Path file = Path.of("data", "books.csv");
+        System.out.println("Path: " + file);
+        System.out.println("File: " + file.getFileName());
+        System.out.println("Parent: " + file.getParent());
+        System.out.println("Absolute Path: " + file.toAbsolutePath());
+        System.out.println("Exists: " + Files.exists(file));
+    }
+}
