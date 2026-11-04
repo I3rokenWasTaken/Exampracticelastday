@@ -2,21 +2,32 @@ package ie.example1.oop.lastday;
 
 public class Main {
     public static void main(String[] args) {
-        try {
-            Book myBook = new Book("Dune", "Frank", 412);
-            LibraryService service = new LibraryService();
-            System.out.println("Creating a new book");
-            System.out.println(myBook.getStatus());
-            myBook.borrowBook();
-            System.out.println(myBook.getStatus());
-            myBook.returnBook();
-            System.out.println(myBook.getStatus());
 
-            service.loanBook(myBook, 12);
-            System.out.println(myBook.getStatus());
-        } catch (IllegalArgumentException ex)
-        {
-            System.out.println(ex.getMessage());
-        }
+            Book first = new Book("Dune", "Frank", 412);
+            Book middle = new Book ("Animal Farm", "George", 567);
+            Book second = new Book("Clean Code", "Robert C. Mairtin", 464);
+
+           LibraryService service = new LibraryService();
+
+            service.addBook(first);
+            service.addBook(middle);
+            service.addBook(second);
+
+            System.out.println("Book list: " + service.getBookCount());
+
+            for (Book book: service.getAllBooks()){
+                System.out.println(book.getTitle());
+            }
+
+            Book found = service.findBookByTitle("Dune");
+
+            if(found != null){
+                System.out.println(found.getTitle());
+            }
+            else{
+                System.out.println("Book not found");
+            }
+
+
     }
 }
