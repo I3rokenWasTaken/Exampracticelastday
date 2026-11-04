@@ -4,11 +4,16 @@ import java.util.Scanner;
 
 public class ExceptionWarmUp {
     public static void main(String[] args){
-        System.out.println("Enter a Message");
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a Page Count");
         String message = sc.nextLine();
-        System.out.println("You entered: " + message);
-        sc.close();
+        try{
+            int pagecount = Integer.parseInt(message);
+            System.out.println("You entered: " + pagecount);
+        }
+        catch (NumberFormatException e){
+            System.out.println("Invalid Input " + e.getMessage());
+        }
     }
 
 }
